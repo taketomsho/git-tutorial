@@ -5,9 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test release
-        uses: ./
+        uses: taimos/github-action-instana-release@%%version%%
         with:
-          releaseName: 'Github action test'
+          releaseName: 'Deployed version 42'
         env:
           INSTANA_BASE: ${{ secrets.INSTANA_BASE }}
           INSTANA_TOKEN: ${{ secrets.INSTANA_TOKEN }}
+
+
