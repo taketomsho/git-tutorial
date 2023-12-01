@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test release
-        uses: taimos/github-action-instana-release@%%version%%
+        uses: taimos/github-action-instana-release@v4
         with:
           releaseName: 'Deployed version 42'
         env:
