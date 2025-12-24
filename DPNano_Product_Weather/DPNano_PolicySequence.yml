@@ -1,0 +1,14 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: DPNano_PolicySequence
+  namespace: DPNano_Product_Weather
+  version: '1'
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  main:
+    - $ref: DPNano_Product_Weather:DPNano_Cors:1
+    - $ref: DPNano_Product_Weather:default-invoke-policy-weather-nano-seq:1

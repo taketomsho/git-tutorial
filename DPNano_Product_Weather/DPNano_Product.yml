@@ -1,0 +1,14 @@
+kind: Product
+apiVersion: api.ibm.com/v1
+metadata:
+  name: product
+  namespace: dpnano_product_weather
+  version: '1'
+  tags: []
+  description: ''
+spec:
+  apis:
+    - $ref: DPNano_Product_Weather:WeatherApi:1
+  plans:
+    - $ref: DPNano_Product_Weather:DPNano_Plan:1
+  extensions: {}

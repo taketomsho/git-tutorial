@@ -1,0 +1,20 @@
+kind: Invoke
+apiVersion: api.ibm.com/v1
+metadata:
+  name: default-invoke-policy-weather-nano-seq
+  namespace: DPNano_Product_Weather
+  version: '1'
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  endpoint:
+    http:
+      target:
+        timeout: 60
+        url: https://api.data.gov.sg/v1/environment/air-temperature
+        tlsClientProfile: tls-client-profile-default:1.0.0
+        version: HTTP/1.1
+      verb: GET
+  output: response
